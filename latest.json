@@ -1,0 +1,10 @@
+{
+  "versie": "0.0.0",
+  "naam": "Vaultbridge — nog niets uitgebracht",
+  "gepubliceerd": null,
+  "samenvatting": "Er is nog geen release. Deze repo staat klaar.",
+  "notities": "Dit manifest is een plaatshouder. Zodra er een release is vervangt gereedschap/maak-release.sh hem, en dan staat er per platform een url, een omvang en een SHA-256.",
+  "macos": null,
+  "windows": null,
+  "extensie": null
+}
