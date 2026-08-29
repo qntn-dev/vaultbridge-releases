@@ -1,63 +1,68 @@
 # Vaultbridge — releases
 
-Downloads voor Vaultbridge, en het manifest dat de ingebouwde updater leest.
+Downloads for Vaultbridge, and the manifest its built-in updater reads.
 
-De broncode staat hier niet. Deze repo bestaat omdat een geïnstalleerde app moet
-kunnen vragen "is er een nieuwere versie?" zonder inloggegevens, en de bronrepo
-privé is — dus liggen de binaries apart van de code.
+The source code is not here. This repository exists so an installed app can ask
+"is there a newer version?" without credentials, while the source repository stays
+private — so the binaries live apart from the code.
 
-Vaultbridge is één ding in drie stukken, en ze horen bij dezelfde versie:
+Vaultbridge is one thing in three parts, and they belong to the same version:
 
-| | wat het is |
+| | what it is |
 |---|---|
-| **Kluis.app** (macOS) | de app die met de lokale Keeper-service praat |
-| **Kluis** (Windows) | dezelfde app, als WebView2-schil om hetzelfde venster |
-| **de Chrome-extensie** | praat nooit met de kluis, alleen met de app |
+| **Kluis.app** (macOS) | the app that talks to the local Keeper service |
+| **Kluis** (Windows) | the same app, as a WebView2 shell around the same window |
+| **the Chrome extension** | never talks to the vault, only to the app |
 
-De extensie en de app praten via een brugprotocol dat per versie kan veranderen.
-Een nieuwe extensie bij een oude app levert "onbekende actie" op, en omgekeerd een
-half werkend venster. Neem ze samen.
+The extension and the app speak a bridge protocol that can change between versions.
+A new extension against an old app gives "unknown action"; the other way round you
+get a half-working window. Take them together.
 
-## Installeren op macOS
+## Installing on macOS
 
-`Kluis-<versie>.dmg` openen, **Kluis naar Programma's slepen en hem daar starten**.
-Niet vanaf het schijfbeeld: het pad van een gemonteerd schijfbeeld verdwijnt bij het
-uitwerpen, en dan start de browser een hostbinary dat er niet meer is. Kluis zegt het
-zelf als je dat vergeet.
+Open `Kluis-<version>.dmg`, then **drag Kluis to Applications and start it there**.
+Not from the disk image: the path of a mounted image disappears when you eject it,
+and the browser would then start a helper that no longer exists. Kluis tells you if
+you forget.
 
-De eerste keer: rechtermuisknop op Kluis → Openen → Openen. Dat is één keer nodig,
-en waarom staat hieronder.
+The first time: right-click Kluis → Open → Open. That's needed once, and the reason
+is below.
 
-Verder hoef je niets aan te melden. Kluis schrijft bij elke start zijn hostmanifest
-naar elke Chromium-browser die op deze Mac staat — Chrome, Brave, Edge, Vivaldi,
-Arc, Chromium. Zet je er later een browser bij, dan is één keer Kluis starten genoeg.
+There is nothing else to register. On every start, Kluis writes its host manifest to
+every Chromium browser on the Mac — Chrome, Brave, Edge, Vivaldi, Arc, Dia, Chromium.
+Install another browser later and starting Kluis once is enough.
 
-De extensie staat niet in de Chrome Web Store: pak `vaultbridge-extensie-<versie>.zip`
-uit, en laad hem via `chrome://extensions` → Ontwikkelaarsmodus → "Uitgepakte extensie
-laden". De extensie-ID ligt vast, dus dit is eenmalig.
+The extension is not in the Chrome Web Store: unpack
+`vaultbridge-extensie-<version>.zip` and load it via `chrome://extensions` → Developer
+mode → "Load unpacked". The extension ID is fixed, so this is a one-time step.
 
-## Dit is nog niet ondertekend, en dat is hier erger dan elders
+## Installing on Windows
 
-Geen van deze builds is code-signed voor distributie: op macOS is er een
-*Apple Development*-certificaat en geen Developer ID, dus geen notarisatie; op
-Windows is er niets. Gatekeeper en SmartScreen waarschuwen dus, en — dit is het
-punt — **je kunt een echte build niet van een aangepaste onderscheiden.**
+Run `Kluis-<version>-setup.exe`. SmartScreen will warn: choose More info → Run anyway.
+The installer registers the host for Chrome, Edge and Brave, and cleans up any
+registration from an earlier version. Load the extension the same way as on macOS.
 
-Bij een browser is dat vervelend. Bij dit programma niet: het leest je hele
-kluis. Een geruilde download is niet "een rare browser", het is iemand anders die
-je wachtwoorden leest. Geef deze builds daarom aan niemand buiten de twee mensen
-die eraan bouwen, tot er wél een Developer ID en een Authenticode-certificaat is.
+## These builds are not signed, and here that matters more than usual
+
+None of these builds is code-signed for distribution: on macOS there is an *Apple
+Development* certificate and no Developer ID, so no notarisation; on Windows there is
+nothing. Gatekeeper and SmartScreen will warn you — and, this is the point, **you
+cannot tell a genuine build from a modified one.**
+
+For a browser that would be annoying. For this program it is not: it reads your
+entire vault. A swapped download is not "a weird browser", it is someone else reading
+your passwords. So do not pass these builds to anyone outside the two people building
+them, until there is a Developer ID and an Authenticode certificate.
 
 ## latest.json
 
-De updater haalt
+The updater fetches
 [`latest.json`](https://raw.githubusercontent.com/qntn-dev/vaultbridge-releases/main/latest.json)
-op en vergelijkt `versie` met zijn eigen. Per platform staan de download-url, de
-omvang en een SHA-256, zodat een afgekapte of geruilde download opvalt vóór er
-iets wordt uitgevoerd.
+and compares `versie` with its own. Per platform it holds the download URL, the size
+and a SHA-256, so a truncated or swapped download is caught before anything runs.
 
-Die hash bewijst integriteit, geen auteurschap: hij reist over hetzelfde pad als
-het bestand dat hij beschrijft. Alleen ondertekenen lost dat op, en dat is er nog
-niet — zie hierboven.
+That hash proves integrity, not authorship: it travels the same path as the file it
+describes. Only signing fixes that, and it isn't there yet — see above.
 
-Het formaat staat in [docs/manifest.md](docs/manifest.md).
+The format is described in [docs/manifest.md](docs/manifest.md) (in Dutch, like the
+rest of the project's internal docs).
