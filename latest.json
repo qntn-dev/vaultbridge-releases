@@ -6,8 +6,8 @@
   "notities": "## Wat het is\n\nKluis vult je wachtwoorden in vanuit je Keeper-kluis. Twee delen die bij elkaar horen: de app op je computer, en de uitbreiding in je browser. De uitbreiding ziet je kluis nooit zelf — die vraagt het aan de app, en krijgt pas een wachtwoord als jij erop klikt én de site klopt.\n\n## Wat je ermee kunt\n\n- Inloggegevens invullen op een pagina, met een keuzelijst als je meerdere accounts op die site hebt.\n- Passkeys gebruiken, waar de site dat aanbiedt.\n- Tweestapscodes invullen.\n- Een nieuwe inlog bewaren: log je ergens in met iets wat nog niet in je kluis staat, dan biedt Kluis aan het op te slaan.\n- De kluis ontgrendelen vanuit je browser met Touch ID, zonder de app erbij te openen (Mac).\n- De kluis sluit zichzelf na vijf minuten waarin je niets doet, en meteen als je computer in slaap gaat of je scherm op slot. Die tijd kun je zelf aanpassen.\n\n## Lees dit voordat je installeert\n\n**Deze bestanden zijn niet ondertekend.** Je computer waarschuwt daarom één keer, en dat kun je wegklikken. Maar er zit een echt punt onder: je kunt aan het bestand niet zien of het van ons komt of dat iemand het onderweg heeft vervangen. Bij een programma dat je hele kluis leest is dat geen detail. Installeer dus alleen wat je rechtstreeks van ons hebt gekregen, en geef het aan niemand anders door.\n\n**Dit is een alpha.** Er gaan dingen stuk. Zorg dat je ook op een andere manier bij je kluis kunt — de Keeper-app of de website — en vertrouw hier niet als enige op.\n\n**De app en de uitbreiding horen bij dezelfde versie.** Werk ze samen bij; los van elkaar begrijpen ze elkaar niet.\n\n**Kluis heeft Keeper Commander nodig** op je computer. Staat die er nog niet, dan helpt het venster van Kluis je er stap voor stap door.\n\n## Installeren\n\n**Mac** — open het schijfbeeld, sleep Kluis naar Programma's en start hem daar (niet vanaf het schijfbeeld). De eerste keer: rechtermuisknop op Kluis, dan Openen.\n\n**Windows** — draai het installatiebestand. SmartScreen waarschuwt: Meer informatie, dan Toch uitvoeren.\n\n**De uitbreiding** (allebei) — pak de zip uit, ga naar `chrome://extensions`, zet Ontwikkelaarsmodus aan en kies \"Uitgepakte extensie laden\". De uitbreiding staat niet in de Chrome Web Store, dus dit is de manier.",
   "macos": {
     "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.1.0/Kluis-0.1.0.dmg",
-    "omvang": 2518489,
-    "sha256": "9fc15bfe7322168030109597142bcd79f471daac16c34251aa13b0d4d6292e13",
+    "omvang": 2518491,
+    "sha256": "859bf9972f19a5c7b0c23bbca7b2a199cfdede59a2f0563eb1c3c7178985f5dc",
     "minimaal": "26.0"
   },
   "windows": {
@@ -18,6 +18,6 @@
   "extensie": {
     "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.1.0/vaultbridge-extensie-0.1.0.zip",
     "omvang": 204037,
-    "sha256": "2f729ddff36fbb0b10f5de35fcf2c81596e31a7e52ade1467f0a3d95080995c1"
+    "sha256": "d967e1b0e956bc1df8c9d4f01e67accc57c09faaa47c554b4f3dd5e7561cbd8a"
   }
 }
