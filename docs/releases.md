@@ -20,6 +20,24 @@ extensie en het manifest het niet met elkaar oneens kunnen zijn over welke build
 dit is. Ze reizen ook echt samen: het brugprotocol kan per versie veranderen, en
 een nieuwe extensie bij een oude app geeft "onbekende actie".
 
+## Wat er per platform uitgaat
+
+| bestand | wat het is |
+|---|---|
+| `Kluis-<versie>.dmg` | macOS: de app, een alias naar Programma's, en een Lees mij |
+| `vaultbridge-extensie-<versie>.zip` | de extensie, om uitgepakt te laden |
+| het Windows-bestand | wordt op Windows gebouwd en meegegeven met `--windows <pad>` |
+
+De DMG wordt gemaakt door `gereedschap/maak-dmg.sh`, dat `maak-release.sh` zelf
+aanroept. Er zit geen installatiescript in het schijfbeeld en dat hoeft ook niet: de
+app meldt zijn eigen hostbinary aan bij de browsers (`Hostaanmelding.swift`), bij elke
+start en alleen als hij niet vanaf het schijfbeeld draait.
+
+Staat er een *Developer ID* in de Keychain, dan ondertekent en notariseert
+`maak-dmg.sh` vanzelf — mits er één keer een keychain-profiel is gezet met
+`xcrun notarytool store-credentials kluis-notarisatie`. Zonder Developer ID gebeurt
+dat niet, en dan moet een tester de app één keer met rechtermuisknop openen.
+
 ## Een release maken
 
 ```bash

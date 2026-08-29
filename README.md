@@ -18,6 +18,24 @@ De extensie en de app praten via een brugprotocol dat per versie kan veranderen.
 Een nieuwe extensie bij een oude app levert "onbekende actie" op, en omgekeerd een
 half werkend venster. Neem ze samen.
 
+## Installeren op macOS
+
+`Kluis-<versie>.dmg` openen, **Kluis naar Programma's slepen en hem daar starten**.
+Niet vanaf het schijfbeeld: het pad van een gemonteerd schijfbeeld verdwijnt bij het
+uitwerpen, en dan start de browser een hostbinary dat er niet meer is. Kluis zegt het
+zelf als je dat vergeet.
+
+De eerste keer: rechtermuisknop op Kluis → Openen → Openen. Dat is één keer nodig,
+en waarom staat hieronder.
+
+Verder hoef je niets aan te melden. Kluis schrijft bij elke start zijn hostmanifest
+naar elke Chromium-browser die op deze Mac staat — Chrome, Brave, Edge, Vivaldi,
+Arc, Chromium. Zet je er later een browser bij, dan is één keer Kluis starten genoeg.
+
+De extensie staat niet in de Chrome Web Store: pak `vaultbridge-extensie-<versie>.zip`
+uit, en laad hem via `chrome://extensions` → Ontwikkelaarsmodus → "Uitgepakte extensie
+laden". De extensie-ID ligt vast, dus dit is eenmalig.
+
 ## Dit is nog niet ondertekend, en dat is hier erger dan elders
 
 Geen van deze builds is code-signed voor distributie: op macOS is er een
