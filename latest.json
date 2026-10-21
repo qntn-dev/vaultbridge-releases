@@ -11,9 +11,13 @@
     "minimaal": "26.0"
   },
   "windows": {
-    "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.1.0/Kluis-0.1.0-setup.exe",
-    "omvang": 80362312,
-    "sha256": "70d2c209b06ff54ce99d36ec5cc9ba85a985e7105675618f67d44b7fdf27f11c"
+    "versie": "0.2.26",
+    "gepubliceerd": "2026-10-21",
+    "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.2.26/Vaultbridge-0.2.26-setup.exe",
+    "omvang": 86246874,
+    "sha256": "6114a6fdb18901b88a17d3121e459a690bd5be84c38777d994badea8d2d8f17e",
+    "samenvatting": "Vaultbridge for Windows 0.2.26",
+    "notities": "Vaultbridge for Windows 0.2.26.\n\n- A Windows app with a sidebar, settings (Vaults, General, Icons, About), one-time codes and optional website icons.\n- Checks for updates at start and installs them after you agree.\n- Safer bridge between the browser extension and the vault: only Chrome and Edge are accepted, and the app checks it talks to the installed service.\n- Passkeys: a clear message when they can't be read, and sign-in uses the passkey the site asks for.\n- Many fixes from a full review.\n\nThe setup is not code-signed, so Windows SmartScreen may warn the first time."
   },
   "extensie": {
     "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.1.0/vaultbridge-extensie-0.1.0.zip",
