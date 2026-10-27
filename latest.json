@@ -11,13 +11,13 @@
     "minimaal": "26.0"
   },
   "windows": {
-    "versie": "0.2.26",
-    "gepubliceerd": "2026-10-21",
-    "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.2.26/Vaultbridge-0.2.26-setup.exe",
-    "omvang": 86246874,
-    "sha256": "6114a6fdb18901b88a17d3121e459a690bd5be84c38777d994badea8d2d8f17e",
-    "samenvatting": "First public Windows release.",
-    "notities": "First public Windows release.\n\n- Fill in logins from your Keeper vault in Chrome and Edge.\n- Updates install from within the app from now on.\n\nThe setup is not code-signed yet, so SmartScreen may warn the first time: click More info, then Run anyway.\n"
+    "versie": "0.2.28",
+    "gepubliceerd": "2026-10-27",
+    "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.2.28/Vaultbridge-0.2.28-setup.exe",
+    "omvang": 86258883,
+    "sha256": "28ed9530764d98e0f547305dc3adb3ecb3d7629b9f187afb5b26b4a38d073816",
+    "samenvatting": "Sign In Again when the Keeper login expired; first-run setup fixes.",
+    "notities": "- When your Keeper login has expired, the app shows \"Sign In Again…\" and opens the sign-in for that vault.\n- The app notices when the first setup was done in the browser extension, without a restart.\n- An interrupted sign-in shows a message instead of waiting forever, and the app and the extension no longer stop each other's sign-in."
   },
   "extensie": {
     "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.1.0/vaultbridge-extensie-0.1.0.zip",
