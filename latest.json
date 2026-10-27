@@ -16,8 +16,8 @@
     "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.2.28/Vaultbridge-0.2.28-setup.exe",
     "omvang": 86258883,
     "sha256": "28ed9530764d98e0f547305dc3adb3ecb3d7629b9f187afb5b26b4a38d073816",
-    "samenvatting": "Sign In Again when the Keeper login expired; first-run setup fixes.",
-    "notities": "- When your Keeper login has expired, the app shows \"Sign In Again…\" and opens the sign-in for that vault.\n- The app notices when the first setup was done in the browser extension, without a restart.\n- An interrupted sign-in shows a message instead of waiting forever, and the app and the extension no longer stop each other's sign-in."
+    "samenvatting": "Vaultbridge now updates itself; Sign In Again when the Keeper login expired.",
+    "notities": "- Vaultbridge now updates itself: it checks for a new version at start and installs it after you agree (Settings > About > Check for Updates to check by hand). Coming from an older version, install this one by hand once.\n- When your Keeper login has expired, the app shows \"Sign In Again…\" and opens the sign-in for that vault.\n- The app notices when the first setup was done in the browser extension, without a restart.\n- An interrupted sign-in shows a message instead of waiting forever, and the app and the extension no longer stop each other's sign-in.\n"
   },
   "extensie": {
     "url": "https://github.com/qntn-dev/vaultbridge-releases/releases/download/v0.1.0/vaultbridge-extensie-0.1.0.zip",
